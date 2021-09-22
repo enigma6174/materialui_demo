@@ -1,11 +1,46 @@
 import React from "react";
+import {
+  AppBar,
+  Container,
+  CssBaseline,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
+import { PhotoCamera } from "@material-ui/icons";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-      <h3>Welcome To Material UI!</h3>
-    </div>
+    <>
+      <CssBaseline />
+      <AppBar position="relative">
+        <Toolbar>
+          <PhotoCamera />
+          <Typography variant="h6">Photo Album</Typography>
+        </Toolbar>
+      </AppBar>
+      <main>
+        <div>
+          <Container maxWidth="sm">
+            <Typography
+              variant="h2"
+              align="center"
+              color="textPrimary"
+              gutterBottom
+            >
+              Photo Album
+            </Typography>
+            <Typography
+              variant="h5"
+              align="center"
+              color="textSecondary"
+              paragraph
+            >
+              Hello World! The Quick Brown Fox Jumps Over The Lazy Dog
+            </Typography>
+          </Container>
+        </div>
+      </main>
+    </>
   );
 }
 
